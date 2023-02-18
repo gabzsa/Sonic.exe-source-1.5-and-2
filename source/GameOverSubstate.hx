@@ -157,9 +157,6 @@ class GameOverSubstate extends MusicBeatSubstate
 			bfdeathshit.cameras = [coolcamera];
 			add(bfdeathshit);
 			bf.alpha = 0;
-			var video:MP4Handler = new MP4Handler();
-			video.playMP4(Paths.video('BfFuckingDies'));
-			video.finishCallback = function()
 			{
 				FlxG.camera.fade(FlxColor.BLACK, 0, true);
 				bfdeathshit.visible = true;
@@ -210,6 +207,10 @@ class GameOverSubstate extends MusicBeatSubstate
 		FlxG.camera.target = null;
 
 		bf.playAnim('firstDeath');
+		
+		#if android
+		addVirtualPad(NONE, A_B);
+		#end
 	}
 
 	function startCountdown():Void
