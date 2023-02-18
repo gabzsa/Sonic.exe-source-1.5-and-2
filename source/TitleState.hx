@@ -42,7 +42,7 @@ class TitleState extends MusicBeatState
 {
 	static var initialized:Bool = false;
 
-	var blackScreen:FlxSprite;
+	var blackScreen:FlxSprite;desktop 
 	var credGroup:FlxGroup;
 	var credTextShit:Alphabet;
 	var textGroup:FlxGroup;
@@ -63,7 +63,7 @@ class TitleState extends MusicBeatState
 		polymod.Polymod.init({modRoot: "mods", dirs: ['introMod']});
 		#end
 
-		#if sys
+		#if desktop 
 		if (!sys.FileSystem.exists(Sys.getCwd() + "/assets/replays"))
 			sys.FileSystem.createDirectory(Sys.getCwd() + "/assets/replays");
 		#end
