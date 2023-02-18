@@ -274,24 +274,24 @@ addVirtualPad(UP_DOWN, A_B);
 				}
 			}
 
-			if (controls.UP_P || FlxG.keys.justPressed.W)
+			if (FlxG.keys.justPressed.UP || FlxG.keys.justPressed.W || controls.UP_P)
 			{
 				FlxG.sound.play(Paths.sound('scrollMenu'));
 				changeItem(-1);
 			}
 
-			if (controls.DOWN_P || FlxG.keys.justPressed.S)
+			if (FlxG.keys.justPressed.DOWN || FlxG.keys.justPressed.S || controls.DOWN_P)
 			{
 				FlxG.sound.play(Paths.sound('scrollMenu'));
 				changeItem(1);
 			}
 
-			if (controls.BACK)
+
+                        if (controls.BACK)
 			{
 				FlxG.switchState(new TitleState());
 
 			}
-
 
 			if (controls.ACCEPT)
 			{
