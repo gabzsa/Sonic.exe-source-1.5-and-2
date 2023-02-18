@@ -189,6 +189,22 @@ class MainMenuState extends MusicBeatState
 
 		changeItem();
 
+		
+		
+		
+	
+
+	
+
+	
+
+	
+
+	
+		
+		
+		
+		
 		super.create();
 	}
 
