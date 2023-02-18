@@ -1,5 +1,5 @@
 package;
-
+#if desktop 
 import flixel.FlxG;
 import flixel.FlxState;
 import flixel.text.FlxText;
@@ -176,3 +176,4 @@ class VideoHandlerMP4
 	}
 
 }
+#end
